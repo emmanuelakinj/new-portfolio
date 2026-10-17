@@ -2,8 +2,9 @@
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 
+const year = new Date().getFullYear();
+
 export function ContactSection() {
-  const year = new Date().getFullYear();
   return (
     <section className="bg-navy text-paper">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 py-14 sm:px-8 sm:py-24 md:flex-row md:items-center lg:px-12">
@@ -32,8 +33,8 @@ export function ContactSection() {
       <footer className="border-t border-white/15">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-6 text-xs text-white/65 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
           <p>
-            © {year} Emmanuel Akinjogunla. Building useful things.
-            Growing with intention.
+            © {year} Emmanuel Akinjogunla. Building useful things. Growing with
+            intention.
           </p>
 
           <div className="flex flex-wrap items-center gap-5">
