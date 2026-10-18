@@ -64,10 +64,10 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-        <figure className="relative mx-auto w-full max-w-md self-start lg:mt-12 lg:max-w-none">
+        <figure className="relative mx-auto w-full max-w-md self-start lg:max-w-none">
           <div className="overflow-hidden rounded-2xl bg-pale">
             <Image
-              src="/me.png"
+              src="/me-1.JPG"
               alt="Emmanuel Abiodun Akinjogunla"
               width={1592}
               height={1592}

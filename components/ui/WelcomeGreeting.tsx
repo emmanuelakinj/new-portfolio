@@ -89,7 +89,7 @@ export function WelcomeGreeting() {
           A little hello before we begin
         </p>
         <Image
-          src="/me.png"
+          src="/bitmoji.png"
           alt="Emmanuel's Bitmoji waving hello"
           width={1592}
           height={1592}
