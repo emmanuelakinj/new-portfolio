@@ -82,51 +82,54 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "travelbuddy",
-    title: "TravelBuddy",
-    status: "in-development",
-    summary: "Making travel planning feel more connected.",
-    description:
-      "A travel project focused on making it easier to plan and organize trips. More details will be shared when the project is ready for public presentation.",
-    technologies: [
-      "nextjs",
-      "typescript",
-      "nestjs",
-      "postgresql",
-      "tailwindcss",
-      "git",
-      "github",
-      "react",
+  id: "travelbuddy",
+  title: "TravelBuddy",
+  status: "in-development",
+  summary: "Connecting travelers through shared experiences.",
+  description:
+    "A full-stack travel platform for discovering group trips, booking experiences, and joining a travel community. TravelBuddy brings the customer booking journey and the team's day-to-day operations into one connected system.",
+  technologies: [
+    "nextjs",
+    "typescript",
+    "nestjs",
+    "postgresql",
+    "tailwindcss",
+    "git",
+    "github",
+    "react",
+  ],
+  featured: true,
+  visibility: "limited",
+  image: "/travelbuddy.png",
+  caseStudy: {
+    timeline: "Ongoing",
+    type: "Full-stack web application",
+    problem:
+      "Group travel involves more than choosing a destination. Travelers need clear trip information and a straightforward booking experience, while organizers need to manage availability, payments, and customer records.",
+    approach:
+      "I'm building a public-facing travel website alongside a dedicated admin workspace, backed by a NestJS API and PostgreSQL database. The work connects trip discovery with booking and Paystack checkout, while giving administrators tools to manage trips, review payments, and track activity.",
+    featuresLabel: "Core capabilities",
+    features: [
+      "Trip discovery with detailed experience pages",
+      "Booking and ticket availability management",
+      "Paystack checkout and payment verification",
+      "Admin payment review and verified refund tracking",
+      "Travel community membership through the Tribe",
+      "Role-based administration, analytics, and notifications",
     ],
-    featured: true,
-    visibility: "limited",
-    image: "/travelbuddy.png",
-    caseStudy: {
-      timeline: "Ongoing",
-      type: "Web application",
-      problem:
-        "Planning a trip can mean keeping track of ideas, destinations, and details in different places. TravelBuddy explores how to make that process feel more connected.",
-      approach:
-        "I'm working toward a thoughtful travel planning experience, with a focus on clear interfaces and making it easier to organize a trip. The project is still in development, with more details to share as it takes shape.",
-      featuresLabel: "Project focus",
-      features: [
-        "Connected travel planning",
-        "Organizing trip ideas and details",
-        "Clear, thoughtful user experience",
-      ],
-      note: "More journeys. More possibilities.",
-    },
-    showcaseTone: "cool",
-    preview: {
-      caption: "Concept preview · Public details coming later",
-      placeholder: {
-        eyebrow: "A project in progress",
-        heading: "The next chapter.",
-        description:
-          "Thoughtful travel planning. More to share when it's ready.",
-      },
+    note: "Shared experiences. New connections. More places to go.",
+  },
+  showcaseTone: "cool",
+  preview: {
+    caption: "In development · Travel discovery, booking, and operations",
+    placeholder: {
+      eyebrow: "Travel together",
+      heading: "Your next adventure starts with connection.",
+      description:
+        "Discover group trips, book an experience, and find your travel community.",
     },
   },
+},
 ];
 
 /** Projects that can appear on public portfolio pages. */
