@@ -2,17 +2,24 @@ import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 
 const contactEmail = "mailto:emmanuelakinj@gmail.com";
+const year = new Date().getFullYear();
 
 export function ContactSection() {
-  const year = new Date().getFullYear();
   return (
-    <footer id="contact" aria-labelledby="contact-heading" className="bg-navy text-paper">
+    <footer
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="bg-navy text-paper"
+    >
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 py-14 sm:px-8 sm:py-24 md:flex-row md:items-center lg:px-12">
         <div>
           <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-sky">
             Have something in mind?
           </p>
-          <h2 id="contact-heading" className="font-serif text-5xl tracking-tight sm:text-7xl">
+          <h2
+            id="contact-heading"
+            className="font-serif text-5xl tracking-tight sm:text-7xl"
+          >
             Let&apos;s make it useful.
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-6 text-white/70">
@@ -26,7 +33,10 @@ export function ContactSection() {
           className="group inline-flex w-fit items-center gap-3 border border-paper/40 bg-paper px-6 py-3.5 text-sm text-navy transition-colors duration-300 hover:bg-sky"
         >
           Get in touch
-          <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight
+            aria-hidden="true"
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+          />
         </Link>
       </div>
 
@@ -37,17 +47,26 @@ export function ContactSection() {
             intention.
           </p>
 
-          <nav aria-label="Footer navigation" className="flex flex-wrap items-center gap-x-5">
+          <nav
+            aria-label="Footer navigation"
+            className="flex flex-wrap items-center gap-x-5"
+          >
             <Link
               className="inline-flex min-h-11 items-center transition-colors hover:text-white"
               href="/projects"
             >
               Work
             </Link>
-            <Link className="inline-flex min-h-11 items-center transition-colors hover:text-white" href="/about">
+            <Link
+              className="inline-flex min-h-11 items-center transition-colors hover:text-white"
+              href="/about"
+            >
               About
             </Link>
-            <Link className="inline-flex min-h-11 items-center transition-colors hover:text-white" href="/blog">
+            <Link
+              className="inline-flex min-h-11 items-center transition-colors hover:text-white"
+              href="/blog"
+            >
               Blog
             </Link>
             <Link
@@ -66,7 +85,11 @@ export function ContactSection() {
             >
               <Mail aria-hidden="true" className="h-4 w-4" />
             </Link>
-            <a href="https://github.com/emmanuelakinj" aria-label="Emmanuel on GitHub" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
+            <a
+              href="https://github.com/emmanuelakinj"
+              aria-label="Emmanuel on GitHub"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white"
+            >
               <svg
                 aria-hidden="true"
                 viewBox="0 0 1024 1024"
@@ -83,7 +106,11 @@ export function ContactSection() {
                 />
               </svg>
             </a>
-            <a href="https://x.com/emmanuelakinj" aria-label="Emmanuel on X" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
+            <a
+              href="https://x.com/emmanuelakinj"
+              aria-label="Emmanuel on X"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white"
+            >
               <svg
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +127,11 @@ export function ContactSection() {
               </svg>
             </a>
 
-            <a href="https://instagram.com/emmanuelakinj" aria-label="Emmanuel on Instagram" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
+            <a
+              href="https://instagram.com/emmanuelakinj"
+              aria-label="Emmanuel on Instagram"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white"
+            >
               <svg
                 aria-hidden="true"
                 width="800px"
