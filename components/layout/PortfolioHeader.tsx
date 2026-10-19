@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 const navigation = [
-  ["Work", "/projects"],
+  ["Home", "/"],
   ["About", "/about"],
+
+  ["Projects", "/projects"],
   ["Blog", "/blog"],
 ];
 
@@ -51,8 +53,7 @@ export function PortfolioHeader() {
               href="/contact"
               className="inline-flex min-h-11 items-center gap-3 rounded-full bg-navy px-5 py-2.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
             >
-              Reach out
-              <ArrowRight aria-hidden="true" className="size-4" />
+              Contact
             </Link>
           </div>
           <button
@@ -87,8 +88,7 @@ export function PortfolioHeader() {
             onClick={() => setOpen(false)}
             className="mt-3 inline-flex min-h-11 items-center gap-3 rounded-full bg-navy px-5 py-2.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
           >
-            Reach out
-            <ArrowRight aria-hidden="true" className="size-4" />
+            Contact
           </Link>
         </div>
       </nav>

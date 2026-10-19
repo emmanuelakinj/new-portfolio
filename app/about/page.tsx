@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
+
 import { AboutIntro } from "@/components/about/AboutIntro";
-import { AboutStats } from "@/components/about/AboutStats";
-import { AboutJourney } from "@/components/about/AboutJourney";
+import { AboutBeginning } from "@/components/about/AboutBeginning";
+import { AboutEducation } from "@/components/about/AboutEducation";
 import { BeyondTheCode } from "@/components/about/BeyondTheCode";
+import { AboutNextSteps } from "@/components/about/AboutNextSteps";
 
 export const metadata: Metadata = {
   title: "About me — Emmanuel Akinjogunla",
-  description: "Software engineer, builder, learner, and a curious human. Get to know Emmanuel Akinjogunla and the thinking behind his work.",
+  description:
+    "Software engineer, builder, learner, and a curious human. Get to know Emmanuel Akinjogunla and the thinking behind his work.",
 };
 
 export default function AboutPage() {
   return (
-    <main
-      id="main-content"
-      className="mx-auto max-w-[1120px] px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-14 lg:px-12"
-    >
+    <main className="min-h-screen overflow-hidden bg-paper text-navy">
       <AboutIntro />
-
-      <AboutStats />
-
-      <AboutJourney />
-
+      <AboutBeginning />
+      <AboutEducation />
       <BeyondTheCode />
+      <AboutNextSteps />
     </main>
   );
 }

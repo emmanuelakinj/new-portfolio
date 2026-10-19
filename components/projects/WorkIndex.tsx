@@ -158,18 +158,7 @@ export function WorkIndex({ projects }: { projects: readonly Project[] }) {
                   Explore project{" "}
                   <ArrowUpRight aria-hidden="true" className="size-4" />
                 </Link>
-                <details className="group/details mt-6 border-y border-navy/15">
-                  <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between text-xs [&::-webkit-details-marker]:hidden">
-                    Project notes{" "}
-                    <Plus
-                      aria-hidden="true"
-                      className="size-4 transition-transform group-open/details:rotate-45"
-                    />
-                  </summary>
-                  <p className="pb-5 text-sm leading-7 text-ink-soft">
-                    {project.description}
-                  </p>
-                </details>
+
                 {project.visibility === "public" && project.href && (
                   <a
                     href={project.href}

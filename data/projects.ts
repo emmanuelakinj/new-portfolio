@@ -74,8 +74,6 @@ export const projects: Project[] = [
       approach: "I'm working toward a thoughtful travel planning experience, with a focus on clear interfaces and making it easier to organize a trip. The project is still in development, with more details to share as it takes shape.",
       featuresLabel: "Project focus",
       features: ["Connected travel planning", "Organizing trip ideas and details", "Clear, thoughtful user experience"],
-      cover: "/about/travel.jpg",
-      coverAlt: "Mountain landscape illustrating the inspiration behind TravelBuddy",
       note: "More journeys. More possibilities.",
     },
     showcaseTone: "cool",

@@ -17,20 +17,17 @@ export function HeroSection() {
           A personal collection of work & ideas
         </span>
       </div>
-      <div className="relative grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-8">
+      <div className="relative grid gap-12 items-center lg:grid-cols-[1.5fr_1fr] lg:gap-8">
         <div className="relative z-10 lg:pb-16">
+          <p className="mb-4 font-serif text-lg italic text-blue-deep">
+            Hi, I&apos;m
+          </p>
           <h1
             id="hero-heading"
-            className="max-w-full font-serif text-[clamp(3rem,11vw,4.5rem)] font-medium leading-[0.95] tracking-[-0.045em] text-navy sm:text-[5rem] lg:text-[clamp(4.5rem,6.5vw,6rem)]"
+            className="max-w-full font-serif text-[clamp(2.25rem,8.5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.045em] text-navy sm:text-[4.5rem] lg:text-[clamp(3rem,5vw,4.75rem)]"
           >
-            <span className="block">Building</span>
-            <span className="block">
-              useful things<span className="text-blue">.</span>
-            </span>
-            <span className="mt-4 block font-normal italic tracking-[-0.035em] text-blue-deep sm:mt-5">
-              <span className="block">Growing with</span>
-              <span className="block">intention.</span>
-            </span>
+            <span className="block">Emmanuel Abiodun</span>
+            <span className="block text-blue-deep">Akinjogunla.</span>
           </h1>
           <div className="mt-8 grid max-w-xl gap-6 sm:grid-cols-[40px_1fr] lg:mt-10">
             <span
@@ -41,9 +38,9 @@ export function HeroSection() {
             </span>
             <div>
               <p className="max-w-sm text-sm leading-7 text-ink-soft">
-                I&apos;m Emmanuel, a software engineer who enjoys turning ideas
-                into thoughtful, practical digital experiences. Curious about
-                the problem. Intentional about the details.
+                I&apos;m a software engineer who enjoys building useful things
+                and turning ideas into real products. I&apos;m always curious
+                about how things work, and how to make them better.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-6">
                 <Link
@@ -68,10 +65,9 @@ export function HeroSection() {
           <div className="overflow-hidden rounded-2xl bg-pale">
             <Image
               src="/me-1.JPG"
+              width={1839}
+              height={2488}
               alt="Emmanuel Abiodun Akinjogunla"
-              width={1592}
-              height={1592}
-              unoptimized
               preload
               sizes="(max-width: 1023px) 90vw, 38vw"
               className="block h-auto w-full object-contain"
