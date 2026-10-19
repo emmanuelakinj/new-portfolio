@@ -41,16 +41,15 @@
     opacity: 0;
     transform: translateY(-100%);
   }
-  .welcome-copy,
-  .welcome-chapter {
+  .welcome-loader[open] .welcome-copy {
     animation: welcome-enter 650ms ease both;
   }
-  .welcome-avatar {
+  .welcome-loader[open] .welcome-avatar {
     animation:
       welcome-enter 650ms ease both,
       welcome-avatar 1.2s ease-in-out 650ms 2;
   }
-  .welcome-note {
-    animation: welcome-enter 600ms ease 300ms both;
+  .welcome-loader[open] .welcome-progress {
+    animation: welcome-progress 3200ms linear both;
   }
 }

@@ -5,11 +5,13 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const sessionKey = "emmanuel-welcome-seen";
+let seenInMemory = false;
 
 export function WelcomeGreeting() {
   const dialog = useRef<HTMLDialogElement>(null);
   const skip = useRef<HTMLButtonElement>(null);
   const savedOverflow = useRef("");
+  const savedFocus = useRef<HTMLElement | null>(null);
   const [leaving, setLeaving] = useState(false);
 
   function finish() {
@@ -18,14 +20,17 @@ export function WelcomeGreeting() {
 
   useLayoutEffect(() => {
     const intro = dialog.current;
-    if (!intro) return;
+    if (!intro || seenInMemory) return;
     try {
-      // if (sessionStorage.getItem(sessionKey)) return;
+      if (sessionStorage.getItem(sessionKey) === "true") return;
     } catch {
       // Browser storage is optional.
     }
 
     const previouslyFocused = document.activeElement;
+    savedFocus.current = previouslyFocused instanceof HTMLElement
+      ? previouslyFocused
+      : null;
     const previousOverflow = document.body.style.overflow;
     savedOverflow.current = previousOverflow;
     const reducedMotion = window.matchMedia(
@@ -52,12 +57,13 @@ export function WelcomeGreeting() {
     ).matches;
     const timer = window.setTimeout(
       () => {
+        seenInMemory = true;
         dialog.current?.close();
         try {
           sessionStorage.setItem(sessionKey, "true");
         } catch {
           // Closing the intro never depends on storage.
-          sessionStorage.setItem(sessionKey, "false");
+          // The in-memory flag still prevents repeats during this visit.
         }
       },
       reducedMotion ? 0 : 550,
@@ -75,8 +81,13 @@ export function WelcomeGreeting() {
         finish();
       }}
       onClose={() => {
+        // A queued close event can arrive after Strict Mode reopens the dialog.
+        if (dialog.current?.open) return;
         document.body.style.overflow = savedOverflow.current;
-        if (dialog.current?.contains(document.activeElement)) {
+        const target = savedFocus.current;
+        if (target?.isConnected && target !== document.body) {
+          target.focus({ preventScroll: true });
+        } else {
           document
             .querySelector<HTMLElement>("header a, main a, main button")
             ?.focus({ preventScroll: true });

@@ -1,18 +1,18 @@
-"use client";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 
-const year = new Date().getFullYear();
+const contactEmail = "mailto:emmanuelakinj@gmail.com";
 
 export function ContactSection() {
+  const year = new Date().getFullYear();
   return (
-    <section className="bg-navy text-paper">
+    <footer id="contact" aria-labelledby="contact-heading" className="bg-navy text-paper">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 py-14 sm:px-8 sm:py-24 md:flex-row md:items-center lg:px-12">
         <div>
           <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-sky">
             Have something in mind?
           </p>
-          <h2 className="font-serif text-5xl tracking-tight sm:text-7xl">
+          <h2 id="contact-heading" className="font-serif text-5xl tracking-tight sm:text-7xl">
             Let&apos;s make it useful.
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-6 text-white/70">
@@ -22,52 +22,53 @@ export function ContactSection() {
         </div>
 
         <Link
-          href="/contact"
+          href={contactEmail}
           className="group inline-flex w-fit items-center gap-3 border border-paper/40 bg-paper px-6 py-3.5 text-sm text-navy transition-colors duration-300 hover:bg-sky"
         >
           Get in touch
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
 
-      <footer className="border-t border-white/15">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-6 text-xs text-white/65 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+      <div className="border-t border-white/15">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-6 text-xs text-white/65 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
           <p>
             © {year} Emmanuel Akinjogunla. Building useful things. Growing with
             intention.
           </p>
 
-          <div className="flex flex-wrap items-center gap-5">
+          <nav aria-label="Footer navigation" className="flex flex-wrap items-center gap-x-5">
             <Link
-              className="transition-colors hover:text-white"
+              className="inline-flex min-h-11 items-center transition-colors hover:text-white"
               href="/projects"
             >
               Work
             </Link>
-            <Link className="transition-colors hover:text-white" href="/about">
+            <Link className="inline-flex min-h-11 items-center transition-colors hover:text-white" href="/about">
               About
             </Link>
-            <Link className="transition-colors hover:text-white" href="/blog">
+            <Link className="inline-flex min-h-11 items-center transition-colors hover:text-white" href="/blog">
               Blog
             </Link>
             <Link
-              className="transition-colors hover:text-white"
-              href="/contact"
+              className="inline-flex min-h-11 items-center transition-colors hover:text-white"
+              href={contactEmail}
             >
               Contact
             </Link>
-          </div>
+          </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1">
             <Link
-              href="/contact"
-              aria-label="Contact"
-              className="transition-colors hover:text-white"
+              href={contactEmail}
+              aria-label="Email Emmanuel"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white"
             >
-              <Mail className="h-4 w-4" />
+              <Mail aria-hidden="true" className="h-4 w-4" />
             </Link>
-            <Link href="https://github.com/emmanuelakinj">
+            <a href="https://github.com/emmanuelakinj" aria-label="Emmanuel on GitHub" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
               <svg
+                aria-hidden="true"
                 viewBox="0 0 1024 1024"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,9 +82,10 @@ export function ContactSection() {
                   fill="white"
                 />
               </svg>
-            </Link>
-            <Link href={"https://x.com/emmanuelakinj"}>
+            </a>
+            <a href="https://x.com/emmanuelakinj" aria-label="Emmanuel on X" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1200"
                 height="1227"
@@ -96,10 +98,11 @@ export function ContactSection() {
                   d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
                 />
               </svg>
-            </Link>
+            </a>
 
-            <Link href={"https://instagram.com/emmanuelakinj"}>
+            <a href="https://instagram.com/emmanuelakinj" aria-label="Emmanuel on Instagram" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white">
               <svg
+                aria-hidden="true"
                 width="800px"
                 height="800px"
                 viewBox="0 0 24 24"
@@ -124,10 +127,10 @@ export function ContactSection() {
                   fill="#fff"
                 />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
-      </footer>
-    </section>
+      </div>
+    </footer>
   );
 }
