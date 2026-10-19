@@ -2,8 +2,8 @@
 @import "../styles/welcome.css";
 
 @theme inline {
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-dm-sans), Arial, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
   --color-cream: #faf8f2;
   --color-paper: #faf8f2;
   --color-navy: #12345a;
@@ -15,4 +15,15 @@
   --color-ink-muted: #526a80;
   --color-line: #d9e2e7;
   --color-pale: #edf3f3;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
 }

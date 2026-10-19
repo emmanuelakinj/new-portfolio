@@ -27,7 +27,6 @@ export function AboutIntro() {
         height={2559}
         alt="Emmanuel Akinjogunla"
         caption="Emmanuel, beyond the code."
-        number="EA / 01"
         variant="portrait"
         sizes="(max-width: 639px) 85vw, (max-width: 1023px) 400px, 430px"
         preload

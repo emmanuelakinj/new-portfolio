@@ -19,13 +19,12 @@ export function BeyondTheCode() {
           src={photographyImage}
           alt="Emmanuel outdoors with a camera around his neck"
           caption="A different kind of focus."
-          number="03"
-          variant="snapshot"
+            variant="snapshot"
           sizes="(max-width: 639px) 85vw, 320px"
         />
 
         <div>
-          <SectionLabel number="03">Outside the code</SectionLabel>
+          <SectionLabel>Outside the code</SectionLabel>
 
           <div className="space-y-4 text-[15px] leading-7 text-ink-soft">
             <p>

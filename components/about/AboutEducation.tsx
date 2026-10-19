@@ -11,13 +11,12 @@ export function AboutEducation() {
         src={graduationImage}
         alt="Emmanuel adjusting his tie outside a university building"
         caption="A milestone, not the finish line."
-        number="02"
         variant="milestone"
         sizes="(max-width: 639px) 85vw, 340px"
       />
 
       <div>
-        <SectionLabel number="02">Education</SectionLabel>
+        <SectionLabel>Education</SectionLabel>
 
         <div className="space-y-4 text-[15px] leading-7 text-ink-soft">
           <p>

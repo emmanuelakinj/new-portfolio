@@ -10,7 +10,7 @@ export function HeroSection() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 inset-y-2 -z-10 bg-sky/30 [clip-path:polygon(0_0,100%_5%,100%_100%,0_95%)] sm:inset-y-3 sm:[clip-path:polygon(0_0,100%_12%,100%_100%,0_88%)]"
+        className="pointer-events-none absolute inset-x-0 inset-y-30 -z-10 bg-sky/30 [clip-path:polygon(0_0,100%_5%,100%_100%,0_95%)] sm:inset-y-3 sm:[clip-path:polygon(0_0,100%_12%,100%_100%,0_88%)]"
       />
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-b border-navy/15 pb-5 text-[10px] uppercase tracking-[0.18em]">

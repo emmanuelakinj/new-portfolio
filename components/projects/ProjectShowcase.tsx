@@ -20,7 +20,7 @@ export function ProjectShowcase({ projects }: { projects: readonly Project[]; })
         <div className="mb-12 flex items-end justify-between gap-5 sm:mb-20">
           <div>
             <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-deep">
-              01 / A few things I&apos;ve been building
+              A few things I&apos;ve been building
             </p>
             <h2
               id="work-heading"
@@ -41,7 +41,7 @@ export function ProjectShowcase({ projects }: { projects: readonly Project[]; })
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-y-16">
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             const projectTechnologies = project.technologies
               .map(getTechnology)
               .filter((technology) => technology !== undefined);
@@ -53,10 +53,6 @@ export function ProjectShowcase({ projects }: { projects: readonly Project[]; })
               >
                 <div>
                   <div className="mb-7 flex items-center gap-4">
-                    <span className="font-serif text-2xl italic text-blue-deep">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="h-px w-8 bg-navy/20" />
                     <p className="flex items-center gap-2 text-[9px] font-medium uppercase tracking-[0.15em] text-ink-soft">
                       <span className="size-1.5 rounded-full bg-blue-deep" />
                       {projectStatusLabels[project.status]}

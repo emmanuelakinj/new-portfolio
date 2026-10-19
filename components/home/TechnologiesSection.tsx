@@ -134,7 +134,7 @@ export function TechnologiesSection() {
                       />
                     </div>
 
-                    <h3 className="break-words text-[12px] font-semibold tracking-tight text-navy sm:text-[13px]">
+                    <h3 className="break-words font-sans text-[12px] font-semibold tracking-tight text-navy sm:text-[13px]">
                       {technology.name}
                     </h3>
 

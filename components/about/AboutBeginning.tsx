@@ -7,7 +7,7 @@ export function AboutBeginning() {
   <section className="border-y border-line bg-paper/70">
     <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-12 lg:py-20">
       <div>
-        <SectionLabel number="01">The beginning</SectionLabel>
+        <SectionLabel>The beginning</SectionLabel>
 
         <div className="max-w-xl space-y-4 text-[15px] leading-7 text-ink-soft">
           <p>
@@ -35,7 +35,6 @@ export function AboutBeginning() {
         src={beginningImage}
         alt="Emmanuel standing outdoors"
         caption="Where the curiosity began."
-        number="01"
         variant="memory"
         sizes="(max-width: 639px) 85vw, 360px"
       />

@@ -6,7 +6,6 @@ type AboutPhotoProps = {
   height?: number;
   alt: string;
   caption: string;
-  number: string;
   variant?: "portrait" | "memory" | "milestone" | "snapshot" | "wide";
   sizes: string;
   preload?: boolean;
@@ -26,7 +25,6 @@ export function AboutPhoto({
   height,
   alt,
   caption,
-  number,
   variant = "memory",
   sizes,
   preload = false,
@@ -66,9 +64,6 @@ export function AboutPhoto({
       >
         <span className="text-xs font-medium leading-5 text-navy">
           {caption}
-        </span>
-        <span className="shrink-0 font-mono text-[10px] tracking-widest text-ink-soft">
-          {number}
         </span>
       </figcaption>
     </figure>

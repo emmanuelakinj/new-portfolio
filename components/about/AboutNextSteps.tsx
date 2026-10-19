@@ -9,7 +9,7 @@ export function AboutNextSteps() {
     <section className="bg-pale">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-12 lg:py-16">
         <div>
-          <SectionLabel number="04">What&apos;s next</SectionLabel>
+          <SectionLabel>What&apos;s next</SectionLabel>
 
           <p className="max-w-xl text-[15px] leading-7 text-ink-soft">
             I enjoy building things, but I&apos;m also curious about what
@@ -38,8 +38,7 @@ export function AboutNextSteps() {
           src={journeyImage}
           alt="Emmanuel smiling while seated outdoors"
           caption="Same person. Bigger dreams."
-          number="04"
-          variant="wide"
+            variant="wide"
           sizes="(max-width: 1023px) 85vw, 550px"
         />
       </div>

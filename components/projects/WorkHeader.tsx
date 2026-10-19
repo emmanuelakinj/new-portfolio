@@ -6,8 +6,8 @@ export function WorkHeader({ count }: { count: number }) {
       aria-labelledby="work-heading"
       className="mx-auto max-w-7xl px-5 pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-16 lg:px-12"
     >
-      <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-blue-deep">
-        <span>Project index /{String(count).padStart(2, "0")} entries</span>
+      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-blue-deep">
+        <span>{count} {count === 1 ? "project" : "projects"}</span>
         <span>Ideas into practice</span>
       </div>
       <div className="mt-8 flex flex-wrap items-end justify-between gap-8">
@@ -18,7 +18,7 @@ export function WorkHeader({ count }: { count: number }) {
           Things
           <br />
           I&apos;ve
-          <span className="italic text-blue-deep">built.</span>
+          <span className="italic text-blue-deep"> built.</span>
         </h1>
         <div className="max-w-sm pb-2">
           <p className="text-sm leading-7 text-ink-soft">

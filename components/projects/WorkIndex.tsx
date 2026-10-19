@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import {
   projectStatusLabels,
   type Project,
@@ -44,7 +44,7 @@ export function WorkIndex({ projects }: { projects: readonly Project[] }) {
         </div>
         <p
           role="status"
-          className="font-mono text-[10px] uppercase tracking-widest text-ink-soft"
+          className="text-[10px] uppercase tracking-widest text-ink-soft"
         >
           {visible.length} {visible.length === 1 ? "project" : "projects"} on
           view
@@ -63,17 +63,16 @@ export function WorkIndex({ projects }: { projects: readonly Project[] }) {
               aria-labelledby={`work-${project.id}`}
               className="group min-w-0 scroll-mt-28"
             >
-              <div
-                className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-navy/10 p-6 sm:p-10 ${project.showcaseTone === "cool" ? "bg-[#dceaf0]" : "bg-[#eeede4]"}`}
+              <Link
+                href={`/projects/${project.id}`}
+                className={`relative flex aspect-4/3 items-center justify-center overflow-hidden border border-navy/10 p-6 sm:p-10 ${project.showcaseTone === "cool" ? "bg-[#dceaf0]" : "bg-[#eeede4]"}`}
               >
-                <span className="absolute left-5 top-4 font-mono text-[10px] text-ink-soft">
-                  /{String(projects.indexOf(project) + 1).padStart(2, "0")}
-                </span>
                 <span className="absolute right-5 top-4 text-[9px] uppercase tracking-widest text-ink-soft">
                   {projectStatusLabels[project.status]}
                 </span>
+
                 {showImage ? (
-                  <div className="mt-5 w-full overflow-hidden rounded-md border border-navy/15 bg-white shadow-xl shadow-navy/15 transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[-1deg]">
+                  <div className="mt-5 w-full overflow-hidden rounded-md border border-navy/15 bg-white shadow-xl shadow-navy/15 transition-transform duration-500 group-hover:-translate-y-2 group-hover:-rotate-1">
                     <div
                       aria-hidden="true"
                       className="flex gap-1 border-b border-navy/10 bg-paper px-3 py-2"
@@ -91,7 +90,7 @@ export function WorkIndex({ projects }: { projects: readonly Project[] }) {
                       width={2880}
                       height={1800}
                       sizes="(max-width: 1023px) 85vw, 43vw"
-                      className="aspect-[16/10] w-full object-cover object-top"
+                      className="aspect-16/10 w-full object-cover object-top"
                     />
                   </div>
                 ) : (
@@ -115,7 +114,8 @@ export function WorkIndex({ projects }: { projects: readonly Project[] }) {
                     </p>
                   </div>
                 )}
-              </div>
+              </Link>
+
               <div className="pt-6">
                 <h2
                   id={`work-${project.id}`}

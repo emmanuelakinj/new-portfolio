@@ -3,28 +3,24 @@ import { ArrowRight, Code2, Compass, Sparkles, UserRound } from "lucide-react";
 
 const principles = [
   {
-    number: "01",
     title: "Product thinking",
     description:
       "Understanding the problem and the people behind it before choosing a solution.",
     icon: Compass,
   },
   {
-    number: "02",
     title: "Clean code",
     description:
       "Building maintainable, reliable software with clarity and intention.",
     icon: Code2,
   },
   {
-    number: "03",
     title: "Collaboration",
     description:
       "Turning ideas into useful experiences through communication and shared thinking.",
     icon: UserRound,
   },
   {
-    number: "04",
     title: "Continuous growth",
     description:
       "Staying curious, learning through practice, and getting better with every project.",
@@ -60,14 +56,11 @@ export function ApproachSection() {
 
             return (
               <div
-                key={principle.number}
+                key={principle.title}
                 className="border-t border-navy/15 pt-5"
               >
                 <div className="mb-5 flex items-center justify-between">
                   <Icon className="h-6 w-6 text-blue" strokeWidth={1.5} />
-                  <span className="font-mono text-xs text-ink-soft">
-                    {principle.number}
-                  </span>
                 </div>
                 <h3 className="font-serif text-2xl">{principle.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink-soft">
