@@ -36,7 +36,7 @@ export function AboutSection() {
         </p>
 
         <Link
-          href="/about#beyond-the-code"
+          href="/about"
           className="group mt-7 inline-flex items-center gap-2 border-b border-navy/20 pb-2 text-sm font-medium"
         >
           Get to know me

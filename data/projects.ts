@@ -17,7 +17,6 @@ export type Project = {
   summary: string;
   status: ProjectStatus;
   description: string;
-
   technologies: string[];
   featured: boolean;
   visibility: "public" | "limited" | "private";
@@ -48,6 +47,41 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "conlinks-energies",
+    title: "Conlinks Energies",
+    status: "website-project",
+    summary: "A digital presence for an energy business.",
+    description:
+      "A website project for Conlinks Energies. The detailed case study will cover the confirmed contribution, implementation decisions, and technologies.",
+    technologies: [
+      "nextjs",
+      "typescript",
+      "tailwindcss",
+      "git",
+      "github",
+      "react",
+    ],
+    featured: true,
+    visibility: "public",
+    image: "/conlinksenergies.png",
+    href: "https://conlinksenergies.com",
+
+    caseStudy: {
+      type: "Business website",
+      problem:
+        "The project centers on giving an energy business a digital presence that introduces the company clearly.",
+      approach:
+        "The website brings the business into a digital experience. A fuller case study covering my contribution and implementation decisions will be shared when those details are ready.",
+      featuresLabel: "Project focus",
+      features: [
+        "Business presentation",
+        "Clear company information",
+        "A considered digital presence",
+      ],
+      note: "A business. A digital presence.",
+    },
+  },
+  {
     id: "travelbuddy",
     title: "TravelBuddy",
     status: "in-development",
@@ -70,10 +104,16 @@ export const projects: Project[] = [
     caseStudy: {
       timeline: "Ongoing",
       type: "Web application",
-      problem: "Planning a trip can mean keeping track of ideas, destinations, and details in different places. TravelBuddy explores how to make that process feel more connected.",
-      approach: "I'm working toward a thoughtful travel planning experience, with a focus on clear interfaces and making it easier to organize a trip. The project is still in development, with more details to share as it takes shape.",
+      problem:
+        "Planning a trip can mean keeping track of ideas, destinations, and details in different places. TravelBuddy explores how to make that process feel more connected.",
+      approach:
+        "I'm working toward a thoughtful travel planning experience, with a focus on clear interfaces and making it easier to organize a trip. The project is still in development, with more details to share as it takes shape.",
       featuresLabel: "Project focus",
-      features: ["Connected travel planning", "Organizing trip ideas and details", "Clear, thoughtful user experience"],
+      features: [
+        "Connected travel planning",
+        "Organizing trip ideas and details",
+        "Clear, thoughtful user experience",
+      ],
       note: "More journeys. More possibilities.",
     },
     showcaseTone: "cool",
@@ -86,34 +126,6 @@ export const projects: Project[] = [
           "Thoughtful travel planning. More to share when it's ready.",
       },
     },
-  },
-  {
-    id: "conlinks-energies",
-    title: "Conlinks Energies",
-    status: "website-project",
-    summary: "A digital presence for an energy business.",
-    description:
-      "A website project for Conlinks Energies. The detailed case study will cover the confirmed contribution, implementation decisions, and technologies.",
-    technologies: [
-      "nextjs",
-      "typescript",
-      "tailwindcss",
-      "git",
-      "github",
-      "react",
-    ],
-    featured: true,
-    visibility: "public",
-    image: "/conlinksenergies.png",
-    caseStudy: {
-      type: "Business website",
-      problem: "The project centers on giving an energy business a digital presence that introduces the company clearly.",
-      approach: "The website brings the business into a digital experience. A fuller case study covering my contribution and implementation decisions will be shared when those details are ready.",
-      featuresLabel: "Project focus",
-      features: ["Business presentation", "Clear company information", "A considered digital presence"],
-      note: "A business. A digital presence.",
-    },
-    // Add a live project URL only after confirming it.
   },
 ];
 

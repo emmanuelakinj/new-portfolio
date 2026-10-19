@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AboutPhoto } from "./AboutPhoto";
 import beginningImage from "@/public/beginning.jpeg";
 import { SectionLabel } from "./SectionLabel";
 
@@ -31,15 +31,14 @@ export function AboutBeginning() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-2xl bg-pale">
-        <Image
-          src={beginningImage}
-          alt="Emmanuel standing outdoors"
-          className="block h-120 w-full"
-          // sizes="(max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 20vw, 400px"
-          placeholder="blur"
-        />
-      </div>
+      <AboutPhoto
+        src={beginningImage}
+        alt="Emmanuel standing outdoors"
+        caption="Where the curiosity began."
+        number="01"
+        variant="memory"
+        sizes="(max-width: 639px) 85vw, 360px"
+      />
     </div>
   </section>
   );

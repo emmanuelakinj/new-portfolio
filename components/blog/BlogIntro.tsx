@@ -4,14 +4,16 @@ import { NotebookPen } from "lucide-react";
 
 export function BlogIntro() {
   return (
-  <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-12 lg:py-24">
+  <section aria-labelledby="blog-heading" className="relative isolate">
+  
+    <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-12 lg:py-24">
     <div>
       <p className="mb-5 inline-block -rotate-3 font-serif text-lg italic text-blue-deep">
         The blog
         <span className="mt-1 block h-px w-16 rotate-[-5deg] bg-blue-deep" />
       </p>
 
-      <h1 className="max-w-xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+      <h1 id="blog-heading" className="max-w-xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-navy sm:text-6xl lg:text-7xl">
         Things I’m learning along the way.
       </h1>
 
@@ -52,6 +54,7 @@ export function BlogIntro() {
         New topics.
         <span className="mt-2 block h-px w-12 rotate-[-8deg] bg-blue-deep" />
       </div>
+    </div>
     </div>
   </section>
   );

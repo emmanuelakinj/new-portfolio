@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AboutPhoto } from "./AboutPhoto";
 import photographyImage from "@/public/photography.jpg";
 import { BookOpen, Camera, Tv } from "lucide-react";
 import { SectionLabel } from "./SectionLabel";
@@ -15,15 +15,14 @@ export function BeyondTheCode() {
   return (
     <section id="beyond-the-code" className="border-y border-line bg-paper/70">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[0.8fr_1.15fr_0.7fr] lg:gap-10 lg:px-12 lg:py-20">
-        <div className="overflow-hidden rounded-2xl bg-pale">
-          <Image
-            src={photographyImage}
-            alt="Emmanuel outdoors with a camera around his neck"
-            className="block h-auto w-full"
-            sizes="(max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 27vw, 333px"
-            placeholder="blur"
-          />
-        </div>
+        <AboutPhoto
+          src={photographyImage}
+          alt="Emmanuel outdoors with a camera around his neck"
+          caption="A different kind of focus."
+          number="03"
+          variant="snapshot"
+          sizes="(max-width: 639px) 85vw, 320px"
+        />
 
         <div>
           <SectionLabel number="03">Outside the code</SectionLabel>

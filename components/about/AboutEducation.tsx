@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AboutPhoto } from "./AboutPhoto";
 import graduationImage from "@/public/grad.jpg";
 import { GraduationCap } from "lucide-react";
 import { SectionLabel } from "./SectionLabel";
@@ -7,15 +7,14 @@ export function AboutEducation() {
   return (
   <section className="bg-pale">
     <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.85fr_1.1fr_0.65fr] lg:gap-10 lg:px-12 lg:py-20">
-      <div className="overflow-hidden rounded-2xl bg-sky/20">
-        <Image
-          src={graduationImage}
-          alt="Emmanuel adjusting his tie outside a university building"
-          className="block h-auto w-full"
-          sizes="(max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 28vw, 361px"
-          placeholder="blur"
-        />
-      </div>
+      <AboutPhoto
+        src={graduationImage}
+        alt="Emmanuel adjusting his tie outside a university building"
+        caption="A milestone, not the finish line."
+        number="02"
+        variant="milestone"
+        sizes="(max-width: 639px) 85vw, 340px"
+      />
 
       <div>
         <SectionLabel number="02">Education</SectionLabel>
