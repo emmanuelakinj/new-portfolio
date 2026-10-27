@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, NotebookPen } from "lucide-react";
+import { CONTACT_EMAIL } from "@/data/constant";
 
 export function BlogComingSoon() {
   return (
@@ -30,7 +31,7 @@ export function BlogComingSoon() {
             </Link>
 
             <Link
-              href="/contact"
+              href={CONTACT_EMAIL}
               className="inline-flex items-center gap-2 text-sm text-ink-soft transition hover:text-blue-deep"
             >
               Say hello

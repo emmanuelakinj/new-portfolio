@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
+import { CONTACT_EMAIL } from "@/data/constant";
 
-const contactEmail = "mailto:emmanuelakinj@gmail.com";
 const year = new Date().getFullYear();
 
 export function ContactSection() {
@@ -28,8 +28,8 @@ export function ContactSection() {
           </p>
         </div>
 
-        <Link
-          href={contactEmail}
+        <a
+          href={CONTACT_EMAIL}
           className="group inline-flex w-fit items-center gap-3 border border-paper/40 bg-paper px-6 py-3.5 text-sm text-navy transition-colors duration-300 hover:bg-sky"
         >
           Get in touch
@@ -37,7 +37,7 @@ export function ContactSection() {
             aria-hidden="true"
             className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
           />
-        </Link>
+        </a>
       </div>
 
       <div className="border-t border-white/15">
@@ -69,22 +69,22 @@ export function ContactSection() {
             >
               Blog
             </Link>
-            <Link
+            <a
               className="inline-flex min-h-11 items-center transition-colors hover:text-white"
-              href={contactEmail}
+              href={CONTACT_EMAIL}
             >
               Contact
-            </Link>
+            </a>
           </nav>
 
           <div className="flex items-center gap-1">
-            <Link
-              href={contactEmail}
+            <a
+              href={CONTACT_EMAIL}
               aria-label="Email Emmanuel"
               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-white/10 hover:text-white"
             >
               <Mail aria-hidden="true" className="h-4 w-4" />
-            </Link>
+            </a>
             <a
               href="https://github.com/emmanuelakinj"
               aria-label="Emmanuel on GitHub"

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { CONTACT_EMAIL } from "@/data/constant";
 
 const navigation = [
   ["Home", "/"],
@@ -49,12 +50,12 @@ export function PortfolioHeader() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href={CONTACT_EMAIL}
               className="inline-flex min-h-11 items-center gap-3 rounded-full bg-navy px-5 py-2.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
             >
               Contact
-            </Link>
+            </a>
           </div>
           <button
             id="menu-toggle"
@@ -83,13 +84,13 @@ export function PortfolioHeader() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/contact"
+          <a
+            href={CONTACT_EMAIL}
             onClick={() => setOpen(false)}
             className="mt-3 inline-flex min-h-11 items-center gap-3 rounded-full bg-navy px-5 py-2.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
           >
             Contact
-          </Link>
+          </a>
         </div>
       </nav>
     </header>
